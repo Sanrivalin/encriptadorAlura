@@ -34,21 +34,28 @@ main {
   outline: none;
 }
 
+.section-mensaje {
+    position: relative;
+    
+  }
+
 .mensaje {
   background: white;
   background-image: url("./imagenes/Muñeco.png");
   background-repeat: no-repeat;
   /* background-size:contain; */
   background-size: 75% 40%;
-  background-position: center;
+  background-position: top;
   border: none;
   border-radius: 24px;
   color: #0a3871;
   margin-left: 98px;
   margin-top: 20px;
-  padding-left: 20px;
+  padding-left: 30px;
+  position:absolute;
   position: fixed;
-  height: 85%;
+  height: 75%; 
+  margin-top: 120px; /* ajusta este valor según sea necesario */
 }
 
 .mensaje:focus {
@@ -111,7 +118,7 @@ main {
   cursor: pointer;
   height: 67px;
   margin-left: 120px;
-  margin-top: 650px;
+  margin-top: 660px;
   position: absolute;
   width: 336px;
   position: fixed;
@@ -119,6 +126,24 @@ main {
 
 .copiar:hover {
   background: #cad2ee;
+}
+
+
+
+.informacion {
+  color: #495057;
+  font-size: 18px;
+}
+
+.mensaje-derecho {
+  background: white;
+  color: #495057;
+  font-size: 18px;
+  position: absolute;
+  position: fixed;
+  margin-left: 162px;
+  margin-top: 620px;
+  
 }
 
 .copiar:active,
@@ -139,19 +164,4 @@ main {
   100% {
     transform: scale(1);
   }
-}
-
-.informacion {
-  color: #495057;
-  font-size: 18px;
-}
-
-.mensaje-derecho {
-  background: white;
-  color: #495057;
-  font-size: 18px;
-  position: absolute;
-  position: fixed;
-  margin-left: 172px;
-  margin-top: 520px;
 }

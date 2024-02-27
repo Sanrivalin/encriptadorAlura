@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./izquierda.css" />
+    <link rel="stylesheet" href="./derecha.css" />
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./clue.css" />
+    <link rel="stylesheet" href="./notes.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,41 +19,191 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
-      <img src="./imagenes/Logo.png" alt="logo" class="logo" />
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a href="#" class="navbar-brand">
+            <img src="./imagenes/iconBat.png" alt="logo" class="logo" />
+          </a>
+          <a href="#" class="navbar-btn">Decryptor</a>
+        </div>
+      </nav>
+      <section class="hero">
+        <div class="hero-container">
+          <img src="./imagenes/Batman9.png" alt="logo" class="hero-image" />
+        </div>
+        <!-- Acordion -->
+        <section class="hero-rules">
+          <!-- tab -->
+          <div class="hero-note">
+            <input type="checkbox" name="accordion-1" id="cb2" />
+            <label for="cb2" class="tab__label">About</label>
+            <!-- Tab__content -->
+            <div class="hero-content">
+              <div class="hero-note">
+                <input type="checkbox" name="accordion-1" id="cb3" />
+                <label for="cb3" class="tab__label">Objective:</label>
+                <div class="hero-content">
+                  <p>
+                    Your mission is to decrypt a message provided word by word
+                    and then rearrange the decrypted words to create a
+                    meaningful sentence. If you succeed, a crucial clue related
+                    to the case will be revealed.
+                  </p>
+                </div>
+              </div>
+              <!-- Tab__content -->
+              <div class="hero-note">
+                <input type="checkbox" name="accordion-1" id="cb4" />
+                <label for="cb4" class="tab__label"
+                  >Decrypting the Message:</label
+                >
+                <div class="hero-content">
+                  <p>
+                    You were provided with a message encrypted word by word.
+                    Each word is represented by a series of characters that need
+                    to be decrypted. Decrypt each word using the decryption
+                    panel. Pay close attention to each word's context and
+                    meaning as you decrypt them.
+                  </p>
+                </div>
+              </div>
+              <!-- Tab__content -->
+              <div class="hero-note">
+                <input type="checkbox" name="accordion-1" id="cb5" />
+                <label for="cb5" class="tab__label"
+                  >Forming the Sentence:</label
+                >
+                <div class="hero-content">
+                  <p>
+                    Once you've decrypted all the words, arrange them in the
+                    correct order to create a coherent sentence in the notes
+                    sheet. Think critically and use your deductive reasoning to
+                    ensure the sentence makes sense in the context of the case.
+                  </p>
+                </div>
+              </div>
+              <!-- Tab__content -->
+              <div class="hero-note">
+                <input type="checkbox" name="accordion-1" id="cb6" />
+                <label for="cb6" class="tab__label"
+                  >Submitting Your Answer:</label
+                >
+                <div class="hero-content">
+                  <p>
+                    Enter your sentence into the input field provided. Click the
+                    "Submit" button to submit your answer for verification.
+                  </p>
+                </div>
+              </div>
+              <!-- Tab__content -->
+              <div class="hero-note">
+                <input type="checkbox" name="accordion-1" id="cb7" />
+                <label for="cb7" class="tab__label">Feedback:</label>
+                <div class="hero-content">
+                  <p>
+                    If your submitted sentence is correct, a crucial clue
+                    related to the case will be revealed. Successfully
+                    decrypting the message and forming the correct sentence will
+                    bring you one step closer to solving the case. Take note of
+                    the revealed clue, as it may hold the key to unraveling the
+                    mystery and bringing the culprit to justice.
+                  </p>
+                  <p>Good luck, detective. Gotham City is counting on you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-note">
+            <input type="checkbox" name="accordion-1" id="cb1" />
+            <label for="cb1" class="tab__label">Words</label>
+            <!-- Tab__content -->
+            <div class="hero-content">
+              <ul>
+                <li>Word1</li>
+                <li>Word2</li>
+                <li>Word3</li>
+                <li>Word4</li>
+                <li>Word5</li>
+                <li>Word6</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
     </header>
+
+    <!-- Main -->
     <main>
-      <section>
-        <textarea
-          class="text-area"
-          placeholder="Ingrese texto aquí"
-          cols="30"
-          rows="10"
-        ></textarea>
-        <div>
-          <h6 class="informacion">Solo letras minusculas y sin acento</h6>
-        </div>
-        <div class="botones">
-          <button class="btn-encriptar" onclick="btnEncriptar()">
-            Encriptar
-          </button>
-          <button class="btn-desencriptar" onclick="btnDesencriptar()">
-            Desencriptar
-          </button>
-          <button class="btn-pegar" onclick="pegarTexto()">Pegar</button>
+      <!-- Text Area Izquierda-->
+      <section class="section-text-area">
+        <div class="container-mensaje">
+          <textarea
+            class="text-area-mensaje"
+            placeholder="Ingrese texto aquí"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <!-- Botones -->
+          <div class="botones-contenedor-izquierdo">
+            <button class="btn-encriptar" onclick="btnEncriptar()">
+              Encriptar
+            </button>
+            <button class="btn-desencriptar" onclick="btnDesencriptar()">
+              Desencriptar
+            </button>
+            <button class="btn-pegar" onclick="pegarTexto()">Pegar</button>
+          </div>
         </div>
       </section>
+
+      <!-- Mensaje Derecha -->
       <section class="section-mensaje">
-        <textarea class="mensaje" cols="20" rows="10"></textarea>
-        <div>
-          <p class="mensaje-derecho">Ningún mensaje fue encontrado</p>
-        </div>
-        <div>
-          <button class="copiar" onclick="copiarTexto()">Copiar</button>
+        <div class="container-motor">
+          <textarea
+            class="text-area-motor"
+            placeholder="Ningún mensaje fue encontrado"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <!-- Botones -->
+          <div class="botones-contenedor-derecho">
+            <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+          </div>
         </div>
       </section>
-    </main>
+
+        <!-- Section notes -->
+        <section class="section-note-card">
+          <div class="note-card">
+            <textarea id="note-text" rows="4" placeholder="Write your note here..."></textarea>
+            <!-- <button onclick="saveNote()">Save Note</button> -->
+          </div>
+        </section>
+      </main>
+
+      <!-- Decifrador - Imagen -->
+      <section class="section-decrypted-message">
+        <div class="card">
+          <div class="message" id="message">
+            Decrypt the words to reveal the clue
+          </div>
+          <input
+            type="text"
+            id="input"
+            class="input"
+            placeholder="Enter the decrypted sentence"
+          />
+          <button id="submit">Submit</button>
+          <img src="./imagenes/clue.jpg" alt="clue-image" id="clue-image" />
+        </div>
+      </section>
+
+    
+
     <script src="./script.js"></script>
   </body>
 </html>

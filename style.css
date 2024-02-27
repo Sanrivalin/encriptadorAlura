@@ -1,149 +1,50 @@
 * {
-  background: #f3f5fc;
+  background: #fd0d0500;
+  /* background-image: linear-gradient(to bottom right, #FD0C05, #000000); */
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
+  margin: 0;
 }
 
-.logo {
-  padding-top: 10px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ff0000;
+}
+
+header {
+  position: relative;
+  height: auto;
+  /* background-image: url("/imagenes/Batman9.png"); */
+  background-size: auto;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
   margin-left: 10px;
-  width: 6%;
+  margin-right: 10px;
 }
 
 main {
   display: flex;
   margin-bottom: 50px;
-  margin-left: 80px;
-}
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  gap: 60px;
+  padding-top: 70px;
+  background-color: #ff0000;
 
-.text-area {
-  border: none;
-  color: #0a3871;
-  margin-top: 90px;
-  text-transform: lowercase;
-}
-
-::placeholder {
-  color: #0a3871;
-}
-
-.text-area:focus {
-  outline: none;
-}
-
-.section-mensaje {
-    position: relative;
-    
-  }
-
-.mensaje {
-  background: white;
-  background-image: url("./imagenes/Muñeco.png");
-  background-repeat: no-repeat;
-  /* background-size:contain; */
-  background-size: 75% 40%;
-  background-position: top;
-  border: none;
-  border-radius: 24px;
-  color: #0a3871;
-  margin-left: 98px;
-  margin-top: 20px;
-  padding-left: 30px;
-  position:absolute;
-  position: fixed;
-  height: 75%; 
-  margin-top: 120px; /* ajusta este valor según sea necesario */
-}
-
-.mensaje:focus {
-  outline: none;
-}
-
-.botones {
-  display: flex;
-  margin-top: 18px;
-}
-
-.btn-desencriptar {
-  background: #d8dfe8;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: #0a3871;
-  cursor: pointer;
-  height: 67px;
-  margin-left: 30px;
-  width: 228px;
-}
-
-.btn-desencriptar:hover {
-  background: #a4aab0;
-}
-
-.btn-encriptar {
-  background-color: #0a3871;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: white;
-  cursor: pointer;
-  height: 67px;
-  width: 228px;
-}
-
-.btn-encriptar:hover {
-  background-color: #2b588e;
-}
-
-.btn-pegar {
-  background: #495057;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: white;
-  cursor: pointer;
-  height: 67px;
-  width: 228px;
-  margin-left: 30px;
-}
-
-.btn-pegar:hover {
-  background: #909aa3;
-}
-
-.copiar {
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: #0a3871;
-  cursor: pointer;
-  height: 67px;
-  margin-left: 120px;
-  margin-top: 695px;
-  position: absolute;
-  width: 336px;
-  position: fixed;
-}
-
-.copiar:hover {
-  background: #cad2ee;
-}
-
-
-
-.informacion {
-  color: #495057;
-  font-size: 18px;
-}
-
-.mensaje-derecho {
-  background: white;
-  color: #495057;
-  font-size: 18px;
-  position: absolute;
-  position: fixed;
-  margin-left: 162px;
-  margin-top: 620px;
-  
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 .copiar:active,
@@ -164,4 +65,39 @@ main {
   100% {
     transform: scale(1);
   }
+}
+
+@media screen and (max-width: 1260px) {
+  /* main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  } */
+
+  /* header {
+    height: 50vh;
+
+  } */
+}
+
+@media screen and (max-width: 1100px) {
+  /* header {
+    height: 60vh;
+
+  } */
+}
+
+@media screen and (max-width: 800px) {
+  /* header {
+   height: 40vh;
+
+ } */
+}
+
+@media screen and (max-width: 600px) {
+  /* header {
+   height: 30vh;
+
+ } */
 }

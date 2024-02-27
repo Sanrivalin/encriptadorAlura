@@ -1,0 +1,69 @@
+.section-decrypted-message {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #ff0000, #000000);
+  border: none; /* Agregado un borde */
+  border-radius: 8px; /* Aumentado el radio del borde para dar aspecto de tarjeta */
+  padding: 20px; /* Espaciado interno para el contenido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  color: white;
+}
+
+#input {
+  margin-top: 10px;
+  width: 100%; /* Asegura que el input ocupe todo el ancho de la tarjeta */
+  padding: 10px; /* Espaciado interno para el input */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  
+  border-radius: 4px; /* Aumentado el radio del borde */
+  color:#e2e2e2
+}
+
+#submit {
+  margin-top: 10px;
+  width: 121px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #ff0000;
+  color: #000000;
+  border: 1px solid #ff0000;
+  border-radius:22px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+  height: 53px;
+  font-size: 22px;
+}
+
+#submit:hover {
+  background: #000000;
+  color: #ff0000;
+  border: none;
+  border: 1px solid #000000;
+}
+
+#clue-image {
+  display: none;
+  width: 100%;
+  margin-top: 20px; /* Espacio superior para separar la imagen del contenido */
+  height: auto;
+}
+
+#input:disabled,
+#submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.input::placeholder {
+  color: #a7a7a7; /* Change placeholder text color to gray */
+}

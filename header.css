@@ -201,7 +201,7 @@
   border-radius: 22px;
 
 } */
-
+/* Estilos para el botón de copiar */
 .copy-button {
   border: 1px solid #ff0000;
   border-radius: 22px;
@@ -209,9 +209,7 @@
   cursor: pointer;
   height: 37px;
   margin-left: 40px;
-
   width: 70px;
-
   background: #ff0000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
@@ -220,11 +218,16 @@
   margin: 9px 0px 0px 0px;
 }
 
+/* Estilos para el botón de copiar cuando se pasa el cursor sobre él */
 .copy-button:hover {
   background: #000000;
   color: #ff0000;
-  border: none;
   border: 1px solid #000000;
+}
+
+/* Estilos para el texto de .info-label cuando se pasa el cursor sobre el botón de copiar */
+.copy-button:hover + .info-label {
+  color: black;
 }
 
 .accordion-title {

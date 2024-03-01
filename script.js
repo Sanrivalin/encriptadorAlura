@@ -164,19 +164,21 @@ function copiarTexto(event) {
   }
 }
 
-//Function Pegar texto
+
+// Function to paste text
 function pegarTexto(event) {
-  // Obtener el contenedor principal del área de texto específica en la que se hizo clic
+  // Get the main container of the specific text area where the click occurred
   var container = event.target.closest(".container-mensaje, .note-card");
 
-  // Verificar si se encontró el contenedor
+  // Check if the container was found
   if (container) {
-    // Obtener el área de texto específica dentro del contenedor
+    // Get the specific text area within the container
     var targetTextArea = container.querySelector(".text-area-mensaje, .text-area-note");
 
-    // Pegar el texto en el área de texto específica
-    navigator.clipboard.readText().then(function (textoCopiado) {
-      targetTextArea.value = textoCopiado;
+    // Paste the text in the specific text area
+    navigator.clipboard.readText().then(function(textoCopiado) {
+      // Append the pasted text to the existing content
+      targetTextArea.value += textoCopiado;
     });
   } else {
     console.error("No se encontró el contenedor del área de texto específica.");
@@ -184,32 +186,27 @@ function pegarTexto(event) {
 }
 
 
-// Function to save note to local storage
-function saveNote() {
-  var note = document.getElementById("note-text").value;
-  if (note.trim() !== "") {
-    localStorage.setItem("userNote", note);
-    // alert("Note saved successfully!"); // Commenting out the alert to avoid interruption
-  } else {
-    // alert("Please enter a note before saving!"); // Commenting out the alert to avoid interruption
-  }
-}
 
-// Function to load note from local storage
-function loadNote() {
+// Función para guardar y cargar la nota en el almacenamiento local
+window.onload = function() {
+  // Cargar la nota desde el almacenamiento local al cargar la página
   var savedNote = localStorage.getItem("userNote");
   if (savedNote) {
-    document.getElementById("note-text").value = savedNote;
+    document.getElementById("textAreaNote").value = savedNote;
   }
-}
 
-// Load note when the page loads
-window.onload = loadNote;
+  // Guardar la nota en el almacenamiento local cuando el usuario escribe en el textarea
+  document.getElementById("textAreaNote").addEventListener("input", function() {
+    var note = document.getElementById("textAreaNote").value;
+    if (note.trim() !== "") {
+      localStorage.setItem("userNote", note);
+      // alert("Note saved successfully!"); // Comentando la alerta para evitar interrupciones
+    } else {
+      // alert("Please enter a note before saving!"); // Comentando la alerta para evitar interrupciones
+    }
+  });
+};
 
-// Automatically save note when the user types
-document.getElementById("note-text").addEventListener("input", function() {
-  saveNote();
-});
 
 
 // Copy Button
@@ -251,6 +248,26 @@ function limpiarTexto() {
   textAreaMotor.value = '';
   textAreaMensaje.value = '';
   textAreaNote.value = '';
+}
+
+function cambiarColorTexto(event) {
+  // Obtener el elemento li padre del botón de copia
+  var liElement = event.target.parentNode;
+  
+  // Guardar el color actual del texto
+  liElement.setAttribute("data-original-color", liElement.style.color);
+  
+  // Cambiar el color del texto del elemento li
+  liElement.style.color = "black";
+}
+
+function restaurarColorTexto(event) {
+  // Obtener el elemento li padre del botón de copia
+  var liElement = event.target.parentNode;
+  
+  // Restaurar el color del texto del elemento li al color original
+  var originalColor = liElement.getAttribute("data-original-color");
+  liElement.style.color = originalColor;
 }
 
 

@@ -71,14 +71,28 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 86%;
+  width: 89%;
   color: rgb(223, 223, 223);
   margin: 82px 0px 0px 0px;
   border: 2px solid;
   border-radius: 0.5rem;
   overflow: hidden;
   max-height: 106%;
+}
+
+.hero-paragraph {  
+    font-size: 20px;
+    margin-bottom: 15px;  
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+    max-height: 10rem;
   
+
+}
+
+.title-label {
+  font-size: 32px;
 }
 .tab__label {
   display: flex;
@@ -100,6 +114,19 @@
   transform: rotate(90deg);
   transition: all 0.35s;
 }
+
+.info-label {
+  font-size: 23px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 21px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+/* .copy-button {
+  margin-left: auto;
+  text-decoration: none;
+} */
 
 .hero-note {
   /* max-height: 60%; */
@@ -147,7 +174,10 @@
 
 .hero-image {
   width: 100%;
+  padding: 63px 0px 0px 0px;
   max-height: 300px;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.8));
 }
 .hero-note h1 {
   font-size: 24px;
@@ -159,14 +189,42 @@
   margin-bottom: 10px;
 }
 
-.hero-note p {
-  font-size: 16px;
-  margin-bottom: 15px;
 
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.35s;
-  max-height: 10rem;
+
+/* 
+.copy-button {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+  margin-left: 5px;
+  background-color: #000000;
+  border-radius: 22px;
+
+} */
+
+.copy-button {
+  border: 1px solid #ff0000;
+  border-radius: 22px;
+  color: #e8e8e8;
+  cursor: pointer;
+  height: 37px;
+  margin-left: 40px;
+
+  width: 70px;
+
+  background: #ff0000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+  font-size: 17px;
+  padding: 5px 0px 0px 12px;
+  margin: 9px 0px 0px 0px;
+}
+
+.copy-button:hover {
+  background: #000000;
+  color: #ff0000;
+  border: none;
+  border: 1px solid #000000;
 }
 
 .accordion-title {
@@ -191,8 +249,31 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .hero-rules{
+  .hero-rules {
     width: 100%;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  .title-label {
+    font-size: 28px;
+  }
+  .info-label {
+    font-size: 18px;
+  }
+  .hero-paragraph {  
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title-label {
+    font-size: 22px;
+  }
+  .info-label {
+    font-size: 16px;
+  }
+  .hero-paragraph {  
+    font-size: 15px;
   }
 }

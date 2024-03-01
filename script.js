@@ -4,6 +4,9 @@ const mensaje = document.querySelector(".text-area-motor");
 const accordionTitle = document.querySelector(".accordion-title");
 const accordionContent = document.querySelector(".hero-rules");
 
+
+
+
 // Funcion Clue
 const cont = "Batman Rules"; // Replace with your desired secret sentence
 let attempts = 3;
@@ -36,11 +39,6 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
-// Acordion
-// accordionTitle.addEventListener("click", function () {
-//   accordionTitle.classList.toggle("active");
-//   accordionContent.classList.toggle("active");
-// });
 
 // Función btnEncriptar
 function btnEncriptar() {
@@ -134,18 +132,55 @@ function desencriptar(stringDesencriptada) {
 }
 
 // Funcion copiar texto
-function copiarTexto() {
-  var mensaje = document.querySelector(".text-area-motor");
-  mensaje.select();
-  navigator.clipboard.writeText(mensaje.value);
+function copiarTexto(event) {
+  const targetElement = event ? event.target : document.querySelector(".btn-copiar");
+  
+  if (targetElement.classList.contains("copy-button")) {
+    const wordToCopy = targetElement.parentNode.textContent.trim();
+    
+    navigator.clipboard.writeText(wordToCopy)
+      .then(() => {
+        // Optional: Provide visual feedback to the user
+        console.log("Word copied to clipboard:", wordToCopy);
+        // You could add a success message or UI indicator here
+      })
+      .catch((err) => {
+        console.error("Failed to copy word:", err);
+        // You could handle the error with an appropriate message to the user
+      });
+  } else {
+    const textToCopy = document.getElementById("textAreaMotor").value;
+    
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        // Optional: Provide visual feedback to the user
+        console.log("Text copied to clipboard:", textToCopy);
+        // You could add a success message or UI indicator here
+      })
+      .catch((err) => {
+        console.error("Failed to copy text:", err);
+        // You could handle the error with an appropriate message to the user
+      });
+  }
 }
 
-// Funcion pegar texto
-function pegarTexto() {
-  navigator.clipboard.readText().then(function (textoCopiado) {
-    var textarea = document.querySelector(".text-area-mensaje");
-    textarea.value = textoCopiado;
-  });
+//Function Pegar texto
+function pegarTexto(event) {
+  // Obtener el contenedor principal del área de texto específica en la que se hizo clic
+  var container = event.target.closest(".container-mensaje, .note-card");
+
+  // Verificar si se encontró el contenedor
+  if (container) {
+    // Obtener el área de texto específica dentro del contenedor
+    var targetTextArea = container.querySelector(".text-area-mensaje, .text-area-note");
+
+    // Pegar el texto en el área de texto específica
+    navigator.clipboard.readText().then(function (textoCopiado) {
+      targetTextArea.value = textoCopiado;
+    });
+  } else {
+    console.error("No se encontró el contenedor del área de texto específica.");
+  }
 }
 
 
@@ -176,6 +211,47 @@ document.getElementById("note-text").addEventListener("input", function() {
   saveNote();
 });
 
+
+// Copy Button
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with the class "copy-button"
+  const copyButtons = document.querySelectorAll('.copy-button');
+
+  // Iterate over each copy button
+  copyButtons.forEach(button => {
+      // Add a click event listener to each copy button
+      button.addEventListener('click', () => {
+          // Get the text of the parent li element (the word)
+          const word = button.parentNode.textContent.trim();
+          // Create a temporary textarea element to copy the word to the clipboard
+          const tempTextArea = document.createElement('textarea');
+          tempTextArea.value = word;
+          document.body.appendChild(tempTextArea);
+          tempTextArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempTextArea);
+          // Optionally provide feedback to the user (e.g., highlighting the word)
+          button.parentNode.style.backgroundColor = 'lightgreen';
+          // Reset the background color after a short delay
+          setTimeout(() => {
+              button.parentNode.style.backgroundColor = '';
+          }, 1000);
+      });
+  });
+});
+
+// Funcion borrar texto
+function limpiarTexto() {
+  // Obtener los elementos textarea por su ID
+  var textAreaMotor = document.getElementById('textAreaMotor');
+  var textAreaMensaje = document.getElementById('textAreaMensaje');
+  var textAreaNote = document.getElementById('textAreaNote');
+
+  // Limpiar el contenido de cada textarea
+  textAreaMotor.value = '';
+  textAreaMensaje.value = '';
+  textAreaNote.value = '';
+}
 
 
 // La letra "e" es convertida para "enter"

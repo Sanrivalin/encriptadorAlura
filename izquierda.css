@@ -7,6 +7,7 @@
     #ff0000
   ) !important;
   border-radius: 22px;
+  border: 2px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +20,15 @@
   width: 100%;
   background-color: #00000000;
   text-align: center;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .text-area-mensaje {
   padding-top: 0%;
   border: none;
   border-radius: 24px;
-  color: #000000;
+  color: #e8e8e8;
   margin-left: 0px;
   margin-top: 20px;
   padding-left: 30px;
@@ -33,11 +36,12 @@
   margin-top: 80px;
   width: 84%;
   font-size: 26px;
-  background-color: #ff0000;
+  background-color: #0000004d;
+  border: 2px solid #ffffff;
 }
 
 ::placeholder {
-  color: #000000;
+  color: #e8e8e8;
 }
 
 .text-area:focus {
@@ -51,12 +55,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* flex-direction: row;
-  justify-content: space-evenly;
-  
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px -47px;
-  gap: 0px; */
   justify-content: space-between;
   gap: 12px;
   margin: 0px 0px 0px -16px;
@@ -65,7 +63,7 @@
 .btn-desencriptar {
     border: 1px solid #ff0000;
     border-radius: 22px;
-    color: #000000;
+    color: #e8e8e8;
     cursor: pointer;
     height: 53px;
     margin-left: 40px;
@@ -87,7 +85,7 @@
 .btn-encriptar {
     border: 1px solid #ff0000;
     border-radius: 22px;
-    color: #000000;
+    color: #e8e8e8;
     cursor: pointer;
     height: 53px;
     margin-left: 40px;
@@ -109,7 +107,7 @@
 .btn-pegar {
     border: 1px solid #ff0000;
     border-radius: 22px;
-    color: #000000;
+    color: #e8e8e8;
     cursor: pointer;
     height: 53px;
     margin-left: 40px;
@@ -128,6 +126,33 @@
     border: 1px solid #000000;
 }
 
+.btn-limpiar{
+  border: 1px solid #ff0000;
+    border-radius: 22px;
+    color: #e8e8e8;
+    cursor: pointer;
+    height: 53px;
+    margin-left: 40px;    
+    width: 70px;
+    font-size: 22px;
+    background: #ff0000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+}
+
+.btn-limpiar:hover {
+  background: #000000;
+  color: #ff0000;
+  border: none;
+  border: 1px solid #000000;
+}
+
+
+@media screen and (max-width: 1680px) {
+  .section-text-area {
+    height: 65vh;
+  }
+}
 
 @media screen and (max-width: 1400px) {
     .section-text-area {

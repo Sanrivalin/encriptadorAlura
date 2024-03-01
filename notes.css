@@ -1,19 +1,46 @@
 .section-note-card {
-    width: 1000%;
+    width: 100%;
+    
 }
 
 
 .note-card {
     
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #00000093;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
+    color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+    width: 89%;
   }
   
   .note-card textarea {
     width: 100%;
     border: none;
     resize: none;
+    color: rgb(255, 255, 255);
   }
+
+
+
+
+  .botones-contenedor-notes {
+    width: 100%;
+    background-color: #00000000;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px;
+    margin: 0px 0px 0px -16px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .note-card {
+        width: 100%;
+
+    }
+}

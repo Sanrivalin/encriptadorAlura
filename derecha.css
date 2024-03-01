@@ -13,6 +13,7 @@
   flex-direction: column-reverse;
   height: 60vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffffff;
 }
 
 .container-motor {
@@ -25,7 +26,7 @@
   padding-top: 0%;
   border: none;
   border-radius: 24px;
-  color: #000000;
+  color: #ebebeb;
   margin-left: 0px;
   margin-top: 20px;
   padding-left: 30px;
@@ -33,11 +34,8 @@
   margin-top: 80px;
   width: 84%;
   font-size: 26px;
-  background-color: #ff0000;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  background-color: #0000004d;
+  border: 2px solid #ffffff;
 }
 
 .mensaje:focus {
@@ -46,20 +44,46 @@
 
 .botones-contenedor-derecho {
   width: 100%;
-  background-color: #000000;
+  background-color: #00000000;
   padding: 0px 0px 0px 0px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 12px;
+  margin: 0px 0px 0px -16px;
 }
+
+.btn-limpiar-dere{
+  border: 1px solid #ff0000;
+  border-radius: 22px;
+  color: #e8e8e8;
+  cursor: pointer;
+  height: 53px;
+  margin-left: 40px;
+  
+  width: 70px;
+  font-size: 22px;
+  background: #ff0000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+}
+
+.btn-limpiar-dere:hover {
+  background: #000000;
+  color: #ff0000;
+  border: 1px solid #000000;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+}
+
 
 .btn-copiar {
   border: 1px solid #ff0000;
   border-radius: 22px;
-  color: #000000;
+  color: #e8e8e8;
   cursor: pointer;
   height: 53px;
-  /* margin-left: 40px; */
-  position: absolute;
+  margin-left: 40px;
   width: 121px;
   font-size: 22px;
   background: #ff0000;
@@ -72,6 +96,12 @@
   color: #ff0000;
   border: 1px solid #000000;
   box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1680px) {
+  .section-mensaje {
+    height: 65vh;
+  }
 }
 
 @media screen and (max-width: 1400px) {

@@ -1,11 +1,7 @@
 .section-text-area {
   width: 42%;
   position: relative;
-  background-image: linear-gradient(
-    to bottom right,
-    #000000,
-    #ff0000
-  ) !important;
+  background-image: linear-gradient(to bottom right, #000000, #ff0000);
   border-radius: 22px;
   border: 2px solid #ffffff;
   display: flex;
@@ -18,30 +14,28 @@
 
 .container-mensaje {
   width: 100%;
-  background-color: #00000000;
+  background-color: transparent;
   text-align: center;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .text-area-mensaje {
-  padding-top: 0%;
-  border: none;
+  padding-top: 0;
+  border: 2px solid #ffffff;
   border-radius: 24px;
   color: #e8e8e8;
-  margin-left: 0px;
-  margin-top: 20px;
+  margin-top: 80px;
   padding-left: 30px;
   height: 69%;
-  margin-top: 80px;
   width: 84%;
   font-size: 26px;
-  background-color: #0000004d;
-  border: 2px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 ::placeholder {
   color: #e8e8e8;
+  font-size: 12px;
 }
 
 .text-area:focus {
@@ -49,104 +43,42 @@
 }
 
 .botones-contenedor-izquierdo {
-    width: 100%;
-  background: #00000000;
-  padding: 0px 0px 0px 0px;
+  width: 100%;
+  background: transparent;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
-  margin: 0px 0px 0px -16px;
+  margin: -3px 0 0 -16px;
 }
 
-.btn-desencriptar {
-    border: 1px solid #ff0000;
-    border-radius: 22px;
-    color: #e8e8e8;
-    cursor: pointer;
-    height: 53px;
-    margin-left: 40px;
-    
-    width: 170px;
-    font-size: 22px;
-    background: #ff0000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-}
-
-.btn-desencriptar:hover {
-  background: #000000;
-  color: #ff0000;
-  border: none;
-  border: 1px solid #000000;
-}
-
-.btn-encriptar {
-    border: 1px solid #ff0000;
-    border-radius: 22px;
-    color: #e8e8e8;
-    cursor: pointer;
-    height: 53px;
-    margin-left: 40px;
-    
-    width: 121px;
-    font-size: 22px;
-    background: #ff0000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-}
-
-.btn-encriptar:hover {
-    background: #000000;
-    color: #ff0000;
-    border: none;
-    border: 1px solid #000000;
-}
-
-.btn-pegar {
-    border: 1px solid #ff0000;
-    border-radius: 22px;
-    color: #e8e8e8;
-    cursor: pointer;
-    height: 53px;
-    margin-left: 40px;
-    
-    width: 121px;
-    font-size: 22px;
-    background: #ff0000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-}
-
-.btn-pegar:hover {
-    background: #000000;
-    color: #ff0000;
-    border: none;
-    border: 1px solid #000000;
-}
-
-.btn-limpiar{
+.btn-desencriptar,
+.btn-encriptar,
+.btn-pegar,
+.btn-limpiar {
   border: 1px solid #ff0000;
-    border-radius: 22px;
-    color: #e8e8e8;
-    cursor: pointer;
-    height: 53px;
-    margin-left: 40px;    
-    width: 70px;
-    font-size: 22px;
-    background: #ff0000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+  border-radius: 22px;
+  color: #e8e8e8;
+  cursor: pointer;
+  height: 53px;
+  margin-left: 40px;
+  width: 121px;
+  font-size: 22px;
+  background: #ff0000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
 }
 
+.btn-desencriptar:hover,
+.btn-encriptar:hover,
+.btn-pegar:hover,
 .btn-limpiar:hover {
   background: #000000;
   color: #ff0000;
   border: none;
   border: 1px solid #000000;
 }
-
 
 @media screen and (max-width: 1680px) {
   .section-text-area {
@@ -155,14 +87,32 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .section-text-area {
-        width: 100%;
+  .section-text-area {
+    width: 100%;
+  }
 
-    }
+  .botones-contenedor-izquierdo {
+    margin-top: 24px;
+    margin-left: 0;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    height: 47px;
+    width: 115px;
+    font-size: 20px;
+  }
+
+  .btn-pegar,
+  .btn-limpiar {
+    font-size: 20px;
+    height: 47px;
+    width: 100px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .section-text-area {
-        height: 90vh;
-    }
+  .section-text-area {
+    height: 90vh;
+  }
 }

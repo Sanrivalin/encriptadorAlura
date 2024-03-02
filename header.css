@@ -14,7 +14,7 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1379px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
@@ -80,15 +80,13 @@
   max-height: 106%;
 }
 
-.hero-paragraph {  
-    font-size: 20px;
-    margin-bottom: 15px;  
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.35s;
-    max-height: 10rem;
-  
-
+.hero-paragraph {
+  font-size: 20px;
+  margin-bottom: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+  max-height: 10rem;
 }
 
 .title-label {
@@ -122,11 +120,6 @@
   padding: 0px 21px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
-
-/* .copy-button {
-  margin-left: auto;
-  text-decoration: none;
-} */
 
 .hero-note {
   /* max-height: 60%; */
@@ -189,33 +182,21 @@
   margin-bottom: 10px;
 }
 
-
-
-/* 
-.copy-button {
-  cursor: pointer;
-  color: blue;
-  text-decoration: none;
-  margin-left: 5px;
-  background-color: #000000;
-  border-radius: 22px;
-
-} */
 /* Estilos para el botón de copiar */
 .copy-button {
   border: 1px solid #ff0000;
   border-radius: 22px;
   color: #e8e8e8;
   cursor: pointer;
-  height: 37px;
+  height: 25px;
   margin-left: 40px;
-  width: 70px;
+  width: 65px;
   background: #ff0000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-  font-size: 17px;
-  padding: 5px 0px 0px 12px;
-  margin: 9px 0px 0px 0px;
+  font-size: 16px;
+  padding: 0px 0px 0px 12px;
+  margin: 5px 0px 0px 0px;
 }
 
 /* Estilos para el botón de copiar cuando se pasa el cursor sobre él */
@@ -264,7 +245,7 @@
   .info-label {
     font-size: 18px;
   }
-  .hero-paragraph {  
+  .hero-paragraph {
     font-size: 17px;
   }
 }
@@ -276,7 +257,7 @@
   .info-label {
     font-size: 16px;
   }
-  .hero-paragraph {  
+  .hero-paragraph {
     font-size: 15px;
   }
 }

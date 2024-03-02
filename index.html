@@ -27,7 +27,7 @@
           <a href="#" class="navbar-brand">
             <img src="./imagenes/iconBat.png" alt="logo" class="logo" />
           </a>
-          <a href="#" class="navbar-btn">Decryptor</a>
+          <a href="#sectionIz" class="navbar-btn">Decrypt</a>
         </div>
       </nav>
       <section class="hero">
@@ -39,7 +39,7 @@
           <!-- tab -->
           <div class="hero-note">
             <input type="checkbox" name="accordion-1" id="cb2" />
-            <label for="cb2" class="tab__label title-label">About</label>
+            <label for="cb2" class="tab__label title-label">What to do</label>
             <!-- Tab__content -->
             <div class="hero-content">
               <div class="hero-note">
@@ -47,7 +47,7 @@
                 <label for="cb3" class="tab__label info-label">Objective:</label>
                 <div class="hero-content">
                   <p class="hero-paragraph">
-                    Your mission is to decrypt a message provided word by word
+                    Your mission is to decrypt a message provided in 3 words
                     and then rearrange the decrypted words to create a
                     meaningful sentence. If you succeed, a crucial clue related
                     to the case will be revealed.
@@ -123,12 +123,12 @@
             <!-- Tab__content -->
             <div class="hero-content">
               <ul>
-                <li class="info-label" onclick="copiarTexto(event)">Word1<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
-                <li class="info-label" onclick="copiarTexto(event)">Word2<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
-                <li class="info-label" onclick="copiarTexto(event)">Word3<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
-                <li class="info-label" onclick="copiarTexto(event)">Word4<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
+                <li class="info-label" onclick="copiarTexto(event)">jufatstimescenter<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
+                <li class="info-label" onclick="copiarTexto(event)">prentervaiimesls<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
+                <li class="info-label" onclick="copiarTexto(event)">nimesghtly<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
+                <!-- <li class="info-label" onclick="copiarTexto(event)">Word4<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
                 <li class="info-label" onclick="copiarTexto(event)">Word5<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
-                <li class="info-label" onclick="copiarTexto(event)">Word6<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li>
+                <li class="info-label" onclick="copiarTexto(event)">Word6<span class="copy-button" onmouseover="cambiarColorTexto(event)" onmouseout="restaurarColorTexto(event)">Copy</span></li> -->
               </ul>
             </div>
           </div>
@@ -139,24 +139,24 @@
     <!-- Main -->
     <main>
       <!-- Text Area Izquierda-->
-      <section class="section-text-area">
+      <section id="sectionIz" class="section-text-area">
         <div class="container-mensaje">
           <textarea
             class="text-area-mensaje"
             id="textAreaMensaje"
-            placeholder="Ingrese texto aquí"
+            placeholder="Enter text here"
             cols="30"
             rows="10"
           ></textarea>
           <!-- Botones -->
           <div class="botones-contenedor-izquierdo">
             <button class="btn-encriptar" onclick="btnEncriptar()">
-              Encriptar
+              Encrypt
             </button>
             <button class="btn-desencriptar" onclick="btnDesencriptar()">
-              Desencriptar
+              Decrypt
             </button>
-            <button class="btn-pegar" onclick="pegarTexto(event)">Pegar</button>
+            <button class="btn-pegar" onclick="pegarTexto(event)">Paste</button>
             <!-- Added Delete/Clean button -->
             <button class="btn-limpiar" onclick="limpiarTexto()">X</button>
           </div>
@@ -169,7 +169,7 @@
           <textarea
             class="text-area-motor"
             id="textAreaMotor"
-            placeholder="Ningún mensaje fue encontrado"
+            placeholder="No message was found"
             cols="30"
             rows="10"
           ></textarea>
@@ -204,7 +204,7 @@
             class="input"
             placeholder="Enter the decrypted sentence"
           />
-          <button id="submit">Submit</button>
+          <button class="btn-submit"id="submit">Submit</button>
           <img src="./imagenes/clue.jpg" alt="clue-image" id="clue-image" />
         </div>
       </section>

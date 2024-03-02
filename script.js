@@ -8,7 +8,7 @@ const accordionContent = document.querySelector(".hero-rules");
 
 
 // Funcion Clue
-const cont = "Batman Rules"; // Replace with your desired secret sentence
+let cont = "Justice prevails nightly"; // Replace with your desired secret sentence
 let attempts = 3;
 
 const messageEl = document.getElementById("message");
@@ -17,10 +17,10 @@ const submitBtn = document.getElementById("submit");
 const clueImageEl = document.getElementById("clue-image");
 
 submitBtn.addEventListener("click", () => {
-  const userSentence = inputEl.value.trim();
+  const userSentence = inputEl.value.trim().toLowerCase(); // Convertimos la entrada del usuario a minúsculas
 
   if (attempts > 0) {
-    if (userSentence === cont) {
+    if (userSentence === cont.toLowerCase()) { // Comparamos en minúsculas
       clueImageEl.style.display = "block";
       messageEl.textContent = "Congratulations! You revealed the clue.";
       inputEl.disabled = true;
@@ -38,6 +38,7 @@ submitBtn.addEventListener("click", () => {
     }
   }
 });
+
 
 
 // Función btnEncriptar

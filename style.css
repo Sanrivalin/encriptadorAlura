@@ -20,7 +20,7 @@ html {
 }
 
 header {
-  position: relative;
+
   height: auto;
   /* background-image: url("/imagenes/Batman9.png"); */
   background-size: auto;
@@ -67,37 +67,3 @@ main {
   }
 }
 
-@media screen and (max-width: 1260px) {
-  /* main {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    margin-left: 10px;
-  } */
-
-  /* header {
-    height: 50vh;
-
-  } */
-}
-
-@media screen and (max-width: 1100px) {
-  /* header {
-    height: 60vh;
-
-  } */
-}
-
-@media screen and (max-width: 800px) {
-  /* header {
-   height: 40vh;
-
- } */
-}
-
-@media screen and (max-width: 600px) {
-  /* header {
-   height: 30vh;
-
- } */
-}

@@ -8,57 +8,59 @@
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(to bottom right, #ff0000, #000000);
-  border: none; /* Agregado un borde */
-  border-radius: 8px; /* Aumentado el radio del borde para dar aspecto de tarjeta */
-  padding: 20px; /* Espaciado interno para el contenido */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 2px solid #ffffff;
-  margin: 20px auto;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .message {
   color: white;
+  font-size: 30px;
+}
+
+::placeholder {
+  color: #dfdfdf;
+  font-size: 30px;
 }
 
 #input {
   margin-top: 10px;
-  width: 100%; /* Asegura que el input ocupe todo el ancho de la tarjeta */
-  padding: 10px; /* Espaciado interno para el input */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  
-  border-radius: 4px; /* Aumentado el radio del borde */
-  color:#e2e2e2;
+  width: calc(100% - 20px);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #e2e2e2;
   border: 2px solid #ffffff;
-
 }
 
 #submit {
   margin-top: 10px;
   width: 121px;
-  padding: 10px;
+  height: 53px;
+  font-size: 22px;
+  padding: 0;
   box-sizing: border-box;
   background-color: #ff0000;
   color: #f0f0f0;
   border: 1px solid #ff0000;
-  border-radius:22px;
+  border-radius: 22px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
-  height: 53px;
-  font-size: 22px;
 }
 
 #submit:hover {
   background: #000000;
   color: #ff0000;
-  border: none;
   border: 1px solid #000000;
 }
 
 #clue-image {
   display: none;
   width: 100%;
-  margin-top: 20px; /* Espacio superior para separar la imagen del contenido */
+  margin-top: 20px;
   height: auto;
 }
 
@@ -68,14 +70,37 @@
   cursor: not-allowed;
 }
 
-
-.input::placeholder {
-  color: #dfdfdf; /* Change placeholder text color to gray */
-
-}
-
 @media screen and (max-width: 1400px) {
   .card {
-      width: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .message {
+    font-size: 28px;
+  }
+  ::placeholder {
+    font-size: 28px;
+  }
+
+  #submit {
+    font-size: 18px;
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .message {
+    font-size: 21px;
+  }
+  ::placeholder {
+    font-size: 21px;
+  }
+
+  #submit {
+    font-size: 16px;
+    height: 42px;
+    width: 104px;
   }
 }

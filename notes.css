@@ -1,45 +1,69 @@
 .section-note-card {
-    width: 100%;
-    
+  width: 100%;
 }
 
 .note-card {
-    
-    padding: 20px;
-    background-color: #00000093;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    color: rgb(255, 255, 255);
-    border: 2px solid #ffffff;
-    width: 89%;
+  padding: 20px;
+  background-color: #00000093;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  width: 89%;
+}
+
+.note-card textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+.btn-pegar,
+.btn-limpiar-dere {
+  font-size: 28px;
+}
+
+.botones-contenedor-notes {
+  width: 100%;
+  background-color: #00000000;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 12px;
+  margin: 0px 0px 0px -16px;
+}
+
+@media screen and (max-width: 1400px) {
+  .note-card {
+    width: 100%;
   }
-  
+}
+
+@media screen and (max-width: 800px) {
   .note-card textarea {
-    width: 100%;
-    border: none;
-    resize: none;
-    color: rgb(255, 255, 255);
+    font-size: 28px;
+  }
+  .btn-pegar,
+  .btn-limpiar-dere {
+    font-size: 18px;
+    width: 76px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .note-card textarea {
+    font-size: 22px;
   }
 
-
-
-
-  .botones-contenedor-notes {
-    width: 100%;
-    background-color: #00000000;
-    padding: 0px 0px 0px 0px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 12px;
-    margin: 0px 0px 0px -16px;
+  .btn-pegar,
+  .btn-limpiar-dere {
+    font-size: 18px;
+    width: 90px;
+    height: 44px;
   }
-
-  @media screen and (max-width: 1400px) {
-    .note-card {
-        width: 100%;
-
-    }
 }

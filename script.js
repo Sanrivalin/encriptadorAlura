@@ -137,7 +137,7 @@ function copiarTexto(event) {
   const targetElement = event ? event.target : document.querySelector(".btn-copiar");
   
   if (targetElement.classList.contains("copy-button")) {
-    const wordToCopy = targetElement.parentNode.textContent.trim();
+    const wordToCopy = targetElement.parentNode.textContent.trim().split("Copy")[0].trim();
     
     navigator.clipboard.writeText(wordToCopy)
       .then(() => {

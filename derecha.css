@@ -55,7 +55,7 @@
   height: 53px;
   margin-left: 40px;
   width: 121px;
-  font-size: 22px;
+  font-size: 22px !important;
   background: #ff0000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
@@ -63,9 +63,9 @@
 
 .btn-limpiar-dere:hover,
 .btn-copiar:hover {
-  background: #000000;
-  color: #ff0000;
-  border: 1px solid #000000;
+  background: #ff00003b;
+  color: #f7f7f7;
+  
   box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
 }
 

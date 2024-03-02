@@ -201,9 +201,9 @@
 
 /* Estilos para el botón de copiar cuando se pasa el cursor sobre él */
 .copy-button:hover {
-  background: #000000;
-  color: #ff0000;
-  border: 1px solid #000000;
+  background: #ff00003d;
+  
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
 }
 
 /* Estilos para el texto de .info-label cuando se pasa el cursor sobre el botón de copiar */

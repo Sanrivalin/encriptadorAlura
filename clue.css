@@ -52,9 +52,9 @@
 }
 
 #submit:hover {
-  background: #000000;
-  color: #ff0000;
-  border: 1px solid #000000;
+  background: #ff00003d;
+  
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
 }
 
 #clue-image {

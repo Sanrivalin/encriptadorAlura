@@ -89,10 +89,12 @@
 @media screen and (max-width: 1400px) {
   .section-text-area {
     width: 100%;
+    height: 58vh;
+    
   }
 
   .botones-contenedor-izquierdo {
-    margin-top: 24px;
+    /* margin-top: 24px; */
     margin-left: 0;
   }
 
@@ -111,8 +113,30 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .section-text-area {
-    height: 90vh;
+    height: 70vh;
+    
   }
+}
+
+
+@media screen and (max-width: 400px) {
+  .btn-desencriptar,
+  .btn-encriptar,
+  .btn-pegar,
+  .btn-limpiar  {
+    height: 4vh;
+    width: 84px;
+  font-size: 16px !important;
+    
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .section-text-area {
+    height: 100vh;
+    
+  }
+  
 }
